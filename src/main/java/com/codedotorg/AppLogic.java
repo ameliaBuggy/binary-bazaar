@@ -64,12 +64,12 @@ public class AppLogic {
      * from the cart and updates the cart's items list view.
      */
     public void removeProductFromCart() {
-        Product selectedProduct = store.getProductsListView().getSelectionModel().getSelectedItem();
+        Product selectedProduct = cart.getSelectedProduct();
 
-
-
-
-
+        cart.removeFromCart(selectedProduct);
+        cart.updateItemsListView();
+        store.updateInventory(selectedProduct);
+        store.updateProductsListView();
     }
 
     /**

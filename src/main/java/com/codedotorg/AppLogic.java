@@ -78,9 +78,8 @@ public class AppLogic {
      * @return the new total of all products in the cart
      */
     public double getNewTotal() {
-
-        
-        return 0.0;
+        // Use the ShoppingCart's getTotalPrice() method to get the total of all products in the cart
+        return cart.getTotalPrice();
     }
 
 }
